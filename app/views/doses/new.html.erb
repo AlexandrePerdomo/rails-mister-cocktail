@@ -1,0 +1,12 @@
+<h1>New dose</h1>
+
+<%= render 'form', cocktail: @cocktail, dose: @dose %>
+
+<p>Liste des ingrédients :</p>
+<% Ingredient.all.each do |ingredient| %>
+  <%= ingredient.id %>
+  <%= ingredient.name %>
+  <p></p>
+<% end %>
+
+<%= link_to 'Back', cocktail_path(@cocktail) %>
